@@ -103,14 +103,13 @@ nav ul li:hover .dropdown {
 .toggle-button {
   position: absolute;
   right: 10%;
-  top: 2%;
+  top: 3.5%;
   z-index: 10;
 }
 
 .toggle-button span {
   display: none;
   position: relative;
-  /* left: 100%; */
   width: 33px;
   height: 2px;
   margin-bottom: 5px;
@@ -170,8 +169,6 @@ nav ul li:hover .dropdown {
     margin: -100px 0 0 -50px;
     padding-top: 40%;
     background: hsl(0, 0%, 98%);
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
     transform: translate(105%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
