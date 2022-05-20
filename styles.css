@@ -1,0 +1,199 @@
+a {
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 41%);
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* navbar */
+nav {
+  display: block;
+  margin: 0;
+  /* padding: 1rem; */
+  width: 100%;
+}
+
+nav a {
+  display: inline-block;
+}
+
+nav div {
+  display: inline-block;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+}
+
+nav a:hover {
+  color: black;
+  /* color: hsl(0, 0%, 8%); */
+}
+
+.logo a {
+  position: relative;
+  top: 10px;
+  padding: 0 2rem;
+}
+
+.right {
+  position: relative;
+  left: 55%;
+}
+
+.register {
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+/* dropdown menu */
+.dropdown {
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: 3px 3px 1em 0.4em rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: none;
+  padding: 1rem;
+  position: absolute;
+  top: 3.125rem;
+}
+
+nav ul li:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  display: list-item;
+  float: none;
+}
+
+.menu-icon {
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+/* dropdown symbol */
+.dropdownParent:hover > img {
+  content: url("./images/icon-arrow-up.svg");
+}
+
+/* navbar mobile */
+/* toggle button animation */
+.toggle-button {
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  z-index: 10;
+}
+
+.toggle-button span {
+  display: none;
+  position: relative;
+  /* left: 100%; */
+  width: 33px;
+  height: 2px;
+  margin-bottom: 5px;
+  background: black;
+  z-index: 1;
+  /* animation */
+  transform-origin: 8px 6px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.toggle-button span:first-of-type {
+  transform-origin: 0% 0%;
+}
+
+.toggle-button span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#checkbox {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#checkbox:checked ~ label > span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+#checkbox:checked ~ label > span:nth-last-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#checkbox:checked ~ label > span:last-child {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+@media (max-width: 375px) {
+  .logo {
+    position: relative;
+    top: 20px;
+    left: -10px;
+  }
+  .menu {
+    display: initial;
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    margin: -100px 0 0 -50px;
+    /* padding: 50px; */
+    padding-top: 125px;
+    background: hsl(0, 0%, 98%);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  .menu li {
+    display: list-item;
+  }
+  .right {
+    position: inherit;
+    left: 10%;
+  }
+  .toggle-button span {
+    display: block;
+  }
+  #checkbox:checked ~ ul {
+    box-shadow: -240px 0px 0px 100px rgba(2, 2, 2, 0.6);
+    transform: translate(10%, 0);
+  }
+}
+/* main */
+
+/* attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
