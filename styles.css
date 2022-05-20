@@ -253,8 +253,23 @@ nav ul li:hover .dropdown {
   float: right;
 }
 
-/* responsive:main */
+#mobile-bg-img {
+  display: none;
+}
 
+/* responsive:main */
+@media (max-width: 375px) {
+  #desktop-bg-img {
+    display: none;
+  }
+  #mobile-bg-img {
+    display: block;
+  }
+  .bg-img img {
+    width: 100%;
+    float: none;
+  }
+}
 /* attribution */
 .attribution {
   clear: both;
