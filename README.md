@@ -4,5 +4,5 @@ I used a hacky way to make the animation slide effect by hiding the menu on the 
 
 My main takeaway from this exercise was to become more proficient in using CSS Selectors, Transitions and layouts.
 
-This is a Frontend mentor challenge.[a link](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5/hub/intro-section-with-dropdown-navigation-_fR5aHs2NY)
+[This is a Frontend mentor challenge.](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5/hub/intro-section-with-dropdown-navigation-_fR5aHs2NY)
 All copyrights of design ideas and images go to Frontend mentor.
