@@ -10,7 +10,7 @@ body {
   font-size: 18px;
   margin: 0;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* navbar */
@@ -203,9 +203,57 @@ nav ul li:hover .dropdown {
   }
 }
 /* main */
+.main {
+  margin: 6% 10%;
+}
+
+.intro-text {
+  width: 60%;
+  float: left;
+}
+
+.intro-text h1 {
+  color: hsl(0, 0%, 8%);
+  font-size: 5rem;
+  margin-right: 22%;
+}
+
+.intro-text p {
+  margin-right: 30%;
+  line-height: 1.5;
+}
+
+.intro-text button {
+  border-radius: 15px;
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  font-weight: 700;
+  font-size: 18px;
+  padding: 1rem 2rem;
+  margin: 5% 0;
+}
+
+.client {
+  margin: 5% 0;
+}
+
+.client img {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.bg-img img {
+  width: 40%;
+  float: right;
+}
+
+/* responsive:main */
 
 /* attribution */
 .attribution {
+  clear: both;
+  position: relative;
+  padding: 10%;
   font-size: 11px;
   text-align: center;
 }
