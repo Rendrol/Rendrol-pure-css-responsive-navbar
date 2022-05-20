@@ -17,7 +17,6 @@ body {
 nav {
   display: block;
   margin: 0;
-  /* padding: 1rem; */
   width: 100%;
 }
 
@@ -163,8 +162,7 @@ nav ul li:hover .dropdown {
     width: 70%;
     height: 100%;
     margin: -100px 0 0 -50px;
-    /* padding: 50px; */
-    padding-top: 125px;
+    padding-top: 40%;
     background: hsl(0, 0%, 98%);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -174,17 +172,34 @@ nav ul li:hover .dropdown {
   }
   .menu li {
     display: list-item;
+    position: relative;
   }
   .right {
-    position: inherit;
-    left: 10%;
+    position: relative;
+    left: -10%;
+    text-align: center;
+    font-size: smaller;
+  }
+  .right ul li {
+    width: 100%;
   }
   .toggle-button span {
     display: block;
   }
+  /* toggle menu - slide animation */
   #checkbox:checked ~ ul {
-    box-shadow: -240px 0px 0px 100px rgba(2, 2, 2, 0.6);
+    box-shadow: -280px 0px 0px 100px rgba(2, 2, 2, 0.6);
     transform: translate(10%, 0);
+  }
+  /* dropdown menu responsive */
+  .dropdown {
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: none;
+    border: none;
+    display: none;
+    padding: 1rem;
+    position: relative;
+    top: 0;
   }
 }
 /* main */
