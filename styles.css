@@ -1,6 +1,7 @@
 a {
   text-decoration: none;
   color: hsl(0, 0%, 41%);
+  display: inline-block;
 }
 
 body {
@@ -23,17 +24,14 @@ body {
 nav {
   display: block;
   margin: 0;
-  width: 100%;
+  width: 100vw;
+  padding-top: 2rem;
 }
-
-nav a {
-  display: inline-block;
+.menu {
+  float: right;
+  margin-right: 3rem;
+  width: calc(100% - 13rem);
 }
-
-nav div {
-  display: inline-block;
-}
-
 nav ul {
   list-style: none;
   display: inline-block;
@@ -49,18 +47,18 @@ nav ul li {
 
 nav a:hover {
   color: black;
-  /* color: hsl(0, 0%, 8%); */
 }
 
 .logo a {
   position: relative;
   top: 10px;
   padding: 0 2rem;
+  float: left;
 }
 
 .right {
-  position: relative;
-  left: 55%;
+  float: right;
+  padding: 0;
 }
 
 .register {
@@ -155,11 +153,9 @@ nav ul li:hover .dropdown {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-@media (max-width: 375px) {
-  .logo {
-    position: relative;
-    top: 20px;
-    left: -10px;
+@media (max-width: 500px) {
+  nav {
+    padding-top: 1.3rem;
   }
   .menu {
     display: initial;
@@ -167,10 +163,10 @@ nav ul li:hover .dropdown {
     width: 70%;
     height: 100%;
     margin: -100px 0 0 -50px;
-    padding-top: 40%;
+    padding-top: 50%;
     background: hsl(0, 0%, 98%);
     transform-origin: 0% 0%;
-    transform: translate(105%, 0);
+    transform: translate(150%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
   .menu li {
@@ -179,12 +175,13 @@ nav ul li:hover .dropdown {
   }
   .right {
     position: relative;
-    left: -10%;
+    left: -15%;
     text-align: center;
     font-size: smaller;
+    float: none;
   }
   .right ul li {
-    width: 100%;
+    width: 90%;
   }
   .toggle-button span {
     display: block;
@@ -192,7 +189,7 @@ nav ul li:hover .dropdown {
   /* toggle menu - slide animation */
   #checkbox:checked ~ ul {
     box-shadow: -280px 0px 0px 100px rgba(2, 2, 2, 0.6);
-    transform: translate(10%, 0);
+    transform: translate(20%, 0);
   }
   /* dropdown menu responsive */
   .dropdown {
@@ -205,6 +202,7 @@ nav ul li:hover .dropdown {
     top: 0;
   }
 }
+
 /* main */
 .main {
   margin: 6% 10%;
@@ -256,7 +254,7 @@ nav ul li:hover .dropdown {
 }
 
 /* responsive:main */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .main {
     margin: 0;
   }
