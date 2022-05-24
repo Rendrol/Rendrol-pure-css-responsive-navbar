@@ -153,20 +153,21 @@ nav ul li:hover .dropdown {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
   nav {
     padding-top: 1.3rem;
   }
   .menu {
     display: initial;
     position: absolute;
-    width: 70%;
+    width: 50%;
     height: 100%;
     margin: -100px 0 0 -50px;
-    padding-top: 50%;
+    padding: 25% 0 0 5%;
+    font-size: larger;
     background: hsl(0, 0%, 98%);
     transform-origin: 0% 0%;
-    transform: translate(150%, 0);
+    transform: translate(200%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
   .menu li {
@@ -188,8 +189,8 @@ nav ul li:hover .dropdown {
   }
   /* toggle menu - slide animation */
   #checkbox:checked ~ ul {
-    box-shadow: -280px 0px 0px 100px rgba(2, 2, 2, 0.6);
-    transform: translate(20%, 0);
+    box-shadow: -280px 0px 0px 1000px rgba(2, 2, 2, 0.6);
+    transform: translate(80%, 0);
   }
   /* dropdown menu responsive */
   .dropdown {
@@ -200,6 +201,17 @@ nav ul li:hover .dropdown {
     padding: 1rem;
     position: relative;
     top: 0;
+  }
+  @media (max-width: 500px) {
+    .menu {
+      width: 70%;
+      padding: 50% 0 0 0;
+      transform: translate(150%, 0);
+      font-size: smaller;
+    }
+    #checkbox:checked ~ ul {
+      transform: translate(20%, 0);
+    }
   }
 }
 
